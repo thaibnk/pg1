@@ -2,7 +2,7 @@
 # This function reads your DATABASE_URL config var and returns a connection
 # string suitable for pg_connect. Put this in your app.
 function pg_connection_string_from_database_url() {
-  extract(parse_url($_ENV["DATABASE_URL"]));
+  extract(parse_url($_ENV["postgres://rflgrwauvxsftx:e6ff6b357907782cd9aac95bd77cb0a0b2413595db490b0e172f9709f8cbf2cf@ec2-174-129-192-200.compute-1.amazonaws.com:5432/d6mkhk4e2c0c15"]));
   return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
 }
 
