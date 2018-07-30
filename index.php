@@ -10,7 +10,8 @@ function pg_connection_string_from_database_url() {
 }
 
 # Here we establish the connection. Yes, that's all.
-$pg_conn = pg_connect(pg_connection_string_from_database_url());
+//$pg_conn = pg_connect(pg_connection_string_from_database_url());
+$pg_conn = pg_connect("user=pbkmkwsgwruuvi password=aba676c32840c46c3d3ac98b6c42a838d86f0136fc575d0335b6c3226004f107 host=ec2-23-21-216-174.compute-1.amazonaws.com port=5432 dbname=dasg8rt0a5q2tp sslmode=enable");
 
 # Now let's use the connection for something silly just to prove it works:
 //$result = pg_query($pg_conn, "SELECT relname FROM pg_stat_user_tables WHERE schemaname='public'");
