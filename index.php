@@ -5,7 +5,7 @@
 //postgres://cmdylcpykuttup:d7eb0656a0673c8aaa7c09324d1521b4112cc9228c4b8ab7df0e5a1bea20cd39@ec2-23-21-238-28.compute-1.amazonaws.com:5432/dek2em9lvto48b
 //postgres://rflgrwauvxsftx:e6ff6b357907782cd9aac95bd77cb0a0b2413595db490b0e172f9709f8cbf2cf@ec2-174-129-192-200.compute-1.amazonaws.com:5432/d6mkhk4e2c0c15
 function pg_connection_string_from_database_url() {
-  extract(parse_url($_ENV["postgres://cmdylcpykuttup:d7eb0656a0673c8aaa7c09324d1521b4112cc9228c4b8ab7df0e5a1bea20cd39@ec2-23-21-238-28.compute-1.amazonaws.com:5432/dek2em9lvto48b"]));
+  extract(parse_url($_ENV["ppostgres://pbkmkwsgwruuvi:aba676c32840c46c3d3ac98b6c42a838d86f0136fc575d0335b6c3226004f107@ec2-23-21-216-174.compute-1.amazonaws.com:5432/dasg8rt0a5q2tp"]));
   return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
 }
 
