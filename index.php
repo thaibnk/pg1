@@ -22,7 +22,10 @@ if (!pg_num_rows($result)) {
   print("xYour connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
 } else {
   print "Tables in your database:\n";
-  while ($row = pg_fetch_row($result)) { print("- $row[0]\n"); }
+  $countrow=0;
+  $totalrow=pg_num_row($result);  echo " Total select record".$totalrow."<br>";
+  while ($row = pg_fetch_row($result)) { $countrow++; print("$countrow. $row[0]\n"); }
+  
 }
 print "\n";
 ?>
