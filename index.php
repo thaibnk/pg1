@@ -23,7 +23,8 @@ if (!pg_num_rows($result)) {
 } else {
   print "Tables in your database:dasg8rt0a5q2tp\n";
   $countrow=0;
-  $totalrow=pg_num_row($result);  echo " Total select record".$totalrow."<br>";
+  $totalrow=pg_num_rows($result);  
+  echo " Total select record".$totalrow."<br>";
   while ($row = pg_fetch_row($result)) { $countrow++; print("$countrow. $row[0]\n"); }
   
 }
